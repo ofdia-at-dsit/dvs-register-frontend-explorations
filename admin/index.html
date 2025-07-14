@@ -52,65 +52,161 @@
       </div>
     </div>
   </header>
+  
+  <section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+      <div class="govuk-service-navigation__container">
+        <span class="govuk-service-navigation__service-name">
+          <a href="/register/index.html" class="govuk-service-navigation__link">
+            Register of digital identity and attribute services
+          </a>
+        </span>
+        <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+          <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+            Menu
+          </button>
+          <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item  govuk-service-navigation__item--active">
+              <a class="govuk-service-navigation__link" href="/admin/index.html">
+                Open tasks 
+                <strong class="govuk-tag govuk-tag--red">
+                  4
+                </strong>
+              </a>
+            </li>
+            <li class="govuk-service-navigation__item">
+              <a class="govuk-service-navigation__link" href="/admin/#">
+                All providers
+                <strong class="govuk-tag govuk-tag--grey">
+                  57
+                </strong>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+  
   <div class="govuk-width-container">
   
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Prototype
+        </strong>
+        <span class="govuk-phase-banner__text">
+          This is not a real government service. Visit the real <a class="govuk-notification-banner__link" href="https://www.digital-identity-services-register.service.gov.uk">register of digital identity and attribute services</a>.
+        </span>
+      </p>
+    </div>
+      
     <main class="govuk-main-wrapper" id="main-content">
-      
-      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Important
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <h3 class="govuk-notification-banner__heading">
-            This is not a real government service.
-          </h3>
-          <p class="govuk-body">This is a prototype for demonstration purposes.</p>
-        </div>
-      </div>
-      
-      <h1 class="govuk-heading-xl">Prototypes</h1>
-      
-      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            
+      <h1 class="govuk-heading-xl">
+        <span class="govuk-caption-xl">Register management</span>
+        Open tasks
+      </h1>
+              
+      <hr class="govuk-section-break govuk-section-break--l">
       
       <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-      
-    
-          <h2 class="govuk-heading-l">Public facing register</h2>
-          <ul class="govuk-list">
-            <li>
-              <a class="govuk-link" href="/register/providers.html">Provider view</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="/register/services.html">Services view</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="/register/service-provider.html">Service provider example</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="/register/service.html">Service example</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="/register/history.html">Register updates page</a>
-            </li>
-          </ul>
-          
-        </div>
-        <div class="govuk-grid-column-one-half">
-          
-          <h2 class="govuk-heading-l">OfDIA administration</h2>
-          <ul class="govuk-list">
-            <li>
-              <a class="govuk-link" href="/admin/index.html">Admin home page</a>
-            </li>
-          </ul>
-          
+        <div class="govuk-grid-column-full">
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 30px; text-align: left;">
+            <div style="background: #1d70b8;">
+              <a href="#" class="govuk-link--inverse  govuk-link--no-underline"><p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-padding-3" style="color: #fff;">
+              <strong class="govuk-heading-l" style="color: #fff;">3</strong>
+              certificates reviews pending</p></a>
+            </div>
+            <div style="background: #1d70b8;">              
+              <a href="#" class="govuk-link--inverse  govuk-link--no-underline"><p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-padding-3" style="color: #fff;">
+              <strong class="govuk-heading-l" style="color: #fff;">1</strong>
+              public interest checks pending</p></a>
+            </div>
+            <div style="border: 3px solid #1d70b8;">
+              <a href="#" class="govuk-link--no-underline"><p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-padding-3" style="color: #1d70b8;">
+              <strong class="govuk-heading-l" style="color: #1d70b8;">0</strong>
+              removal requests pending</p></a>
+            </div>
+          </div>
         </div>
       </div>
       
+      <hr class="govuk-section-break govuk-section-break--l">
+      
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m">Pending certificate reviews</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Service</th>
+                <th scope="col" class="govuk-table__header">Service provider</th>
+                <th scope="col" class="govuk-table__header">Days remaining</th>
+                <th scope="col" class="govuk-table__header govuk-table__cell--numeric">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell govuk-!-width-one-quarter">ACME ID</th>
+                <td class="govuk-table__cell govuk-!-width-one-quarter">ACME Limited</td>
+                <td class="govuk-table__cell govuk-!-width-one-quarter">4 days</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <a href="#" class="govuk-button govuk-!-margin-bottom-0">Review certificate</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell govuk-!-width-one-quarter">ProveMe Biometrics</th>
+                <td class="govuk-table__cell govuk-!-width-one-quarter">WeKnowYou Ltd</td>
+                <td class="govuk-table__cell govuk-!-width-one-quarter">6 days</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <a href="#" class="govuk-button govuk-!-margin-bottom-0">Review certificate</a>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell govuk-!-width-one-quarter">MiMi</th>
+                <td class="govuk-table__cell govuk-!-width-one-quarter">Impancipation Co</td>
+                <td class="govuk-table__cell govuk-!-width-one-quarter">7 days</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <a href="#" class="govuk-button govuk-!-margin-bottom-0">Review certificate</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="govuk-table govuk-!-margin-top-9">
+            <caption class="govuk-table__caption govuk-table__caption--m">Pending public interest checks</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Service</th>
+                <th scope="col" class="govuk-table__header">Service provider</th>
+                <th scope="col" class="govuk-table__header">Days remaining</th>
+                <th scope="col" class="govuk-table__header govuk-table__cell--numeric">Actions</th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__cell govuk-!-width-one-quarter">EyeEye</th>
+                <td class="govuk-table__cell govuk-!-width-one-quarter">1984 Inc.</td>
+                <td class="govuk-table__cell govuk-!-width-one-quarter">10 days</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">
+                  <a href="#" class="govuk-button govuk-!-margin-bottom-0">Start check</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      
+      <hr class="govuk-section-break govuk-section-break--l">
+      
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <h2 class="govuk-heading-m">Pending removal requests</h2>
+          <p class="govuk-body">There are no pending removal requests.</p>
+        </div>
+      </div>
     </main>
+    
   </div>
   <footer class="govuk-footer">
     <div class="govuk-width-container">
