@@ -51,19 +51,37 @@
         </a>
       </div>
     </div>
-    <section aria-label="Service information" class="govuk-service-navigation"
-  data-module="govuk-service-navigation">
-      <div class="govuk-width-container">
-        <div class="govuk-service-navigation__container">
-          <span class="govuk-service-navigation__service-name">
-            <a href="#" class="govuk-service-navigation__link">
-              Register of digital identity and attribute services
-            </a>
-          </span>
-        </div>
-      </div>
-    </section>
   </header>
+  
+  <section aria-label="Service information" class="govuk-service-navigation" data-module="govuk-service-navigation">
+    <div class="govuk-width-container">
+      <div class="govuk-service-navigation__container">
+        <span class="govuk-service-navigation__service-name">
+          <a href="/index.html" class="govuk-service-navigation__link">
+            Register of digital identity and attribute services
+          </a>
+        </span>
+        <nav aria-label="Menu" class="govuk-service-navigation__wrapper">
+          <button type="button" class="govuk-service-navigation__toggle govuk-js-service-navigation-toggle" aria-controls="navigation" hidden>
+            Menu
+          </button>
+          <ul class="govuk-service-navigation__list" id="navigation">
+            <li class="govuk-service-navigation__item">
+              <a class="govuk-service-navigation__link" href="/index.html">
+                <strong class="govuk-service-navigation__active-fallback">View the register</strong>
+              </a>
+            </li>
+            <li class="govuk-service-navigation__item">
+              <a class="govuk-service-navigation__link" href="/register/history.html">
+                Updates
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </section>
+  
   <div class="govuk-width-container">
   
     <div class="govuk-phase-banner">
@@ -76,64 +94,68 @@
         </span>
       </p>
     </div>
+    
+    <nav class="govuk-breadcrumbs" aria-label="Breadcrumb">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="#">ACME Limited</a>
+        </li>
+      </ol>
+    </nav>
   
     <main class="govuk-main-wrapper" id="main-content">
       
-      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-        <div class="govuk-notification-banner__header">
-          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-            Important
-          </h2>
-        </div>
-        <div class="govuk-notification-banner__content">
-          <h3 class="govuk-notification-banner__heading">
-            This is not a real government service.
-          </h3>
-          <p class="govuk-body">This is a prototype for demonstration purposes.</p>
-        </div>
-      </div>
+      <h1 class="govuk-heading-xl">
+          Updates to this register
+      </h1>
       
-      <h1 class="govuk-heading-xl">Prototypes</h1>
+      <p class="govuk-body-l">This page lists any updates to the information contained within this register.</p>
+      
+      <p class="govuk-body">You can also <a href="#" class="govuk-link">subscribe to receive email alerts</a> when something changes.</p>
       
       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-      
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-half">
-      
-    
-          <h2 class="govuk-heading-l">Public facing register</h2>
-          <ul class="govuk-list">
-            <li>
-              <a class="govuk-link" href="/register/providers.html">Provider view</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="/register/services.html">Services view</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="/register/service-provider.html">Service provider example</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="/register/service.html">Service example</a>
-            </li>
-            <li>
-              <a class="govuk-link" href="/register/history.html">Register updates page</a>
-            </li>
-          </ul>
-          
-        </div>
-        <div class="govuk-grid-column-one-half">
-          
-          <h2 class="govuk-heading-l">OfDIA administration</h2>
-          <ul class="govuk-list">
-            <!-- <li>
-              <a class="govuk-link" href="/admin/register management.html">Register management</a>
-            </li> -->
-          </ul>
-          
-        </div>
-      </div>
-      
+     
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--l">Register updates</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header govuk-!-width-one-third">Date</th>
+            <th scope="col" class="govuk-table__header">Update</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-width-one-third">1 January 2025</th>
+            <td class="govuk-table__cell"><a href="/register/service.html" class="govuk-link"><strong>ACME ID</strong></a>, a service by <a href="/register/service-provider.html" class="govuk-link"><strong>ACME Limited</strong></a>, was updated.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-width-one-third">21 December 2024</th>
+            <td class="govuk-table__cell"><a href="/register/service.html" class="govuk-link"><strong>MyID</strong></a>, a service by <a href="/register/service-provider.html" class="govuk-link"><strong>IdentityCo Limited</strong></a>, was added to the register.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-width-one-third">3 December 2024</th>
+            <td class="govuk-table__cell"><a href="/register/service.html" class="govuk-link"><strong>ProveMe Wallet</strong></a>, a service by <a href="/register/service-provider.html" class="govuk-link"><strong>WeKnowYou Ltd</strong></a>, was added to the register.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-width-one-third">3 December 2024</th>
+            <td class="govuk-table__cell"><a href="/register/service.html" class="govuk-link"><strong>ProveMe Biometrics</strong></a>, a service by <a href="/register/service-provider.html" class="govuk-link"><strong>WeKnowYou Ltd</strong></a>, was added to the register.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-width-one-third">1 December 2024</th>
+            <td class="govuk-table__cell">A service was removed from the register.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-width-one-third">31 January 2023</th>
+            <td class="govuk-table__cell"><a href="/register/service.html" class="govuk-link"><strong>ACME ID</strong></a>, a service by <a href="/register/service-provider.html" class="govuk-link"><strong>ACME Limited</strong></a>, was added to the register.</td>
+          </tr>
+        </tbody>
+      </table>
+            
     </main>
+    
   </div>
   <footer class="govuk-footer">
     <div class="govuk-width-container">
