@@ -66,7 +66,7 @@
             Menu
           </button>
           <ul class="govuk-service-navigation__list" id="navigation">
-            <li class="govuk-service-navigation__item  govuk-service-navigation__item--active">
+            <li class="govuk-service-navigation__item">
               <a class="govuk-service-navigation__link" href="/admin/index.html">
                 Open tasks 
                 <strong class="govuk-tag govuk-tag--red">
@@ -82,7 +82,7 @@
                 </strong>
               </a>
             </li>
-            <li class="govuk-service-navigation__item">
+            <li class="govuk-service-navigation__item  govuk-service-navigation__item--active">
               <a class="govuk-service-navigation__link" href="/admin/services.html">
                 All services
                 <strong class="govuk-tag govuk-tag--grey">
@@ -113,106 +113,114 @@
             
       <h1 class="govuk-heading-xl">
         <span class="govuk-caption-xl">Register management</span>
-        Open tasks
+        All services
       </h1>
               
       <hr class="govuk-section-break govuk-section-break--l">
       
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 30px; text-align: left;">
-            <div style="background: #1d70b8;">
-              <a href="#" class="govuk-link--inverse  govuk-link--no-underline"><p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-padding-3" style="color: #fff;">
-              <strong class="govuk-heading-l" style="color: #fff;">3</strong>
-              certificates reviews pending</p></a>
-            </div>
-            <div style="background: #1d70b8;">              
-              <a href="#" class="govuk-link--inverse  govuk-link--no-underline"><p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-padding-3" style="color: #fff;">
-              <strong class="govuk-heading-l" style="color: #fff;">1</strong>
-              public interest checks pending</p></a>
-            </div>
-            <div style="border: 3px solid #1d70b8;">
-              <a href="#" class="govuk-link--no-underline"><p class="govuk-body-l govuk-!-margin-bottom-0 govuk-!-padding-3" style="color: #1d70b8;">
-              <strong class="govuk-heading-l" style="color: #1d70b8;">0</strong>
-              removal requests pending</p></a>
-            </div>
+      <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="SearchProvider">
+            Search for a service
+          </label>
+        </h2>
+
+        <div class="govuk-input__wrapper">
+          <input class="govuk-input govuk-!-width-two-thirds" id="SearchProvider" name="SearchProvider" type="text" value="">
           </div>
         </div>
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button" name="SearchAction" value="search">
+            Search
+          </button>
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" name="SearchAction" value="clearSearch">
+            Clear search
+          </button>
       </div>
       
       <hr class="govuk-section-break govuk-section-break--l">
       
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#published">
+              Published
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#pending">
+              Pending
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#archived">
+              Archive
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="published">
+          <h2 class="govuk-heading-l">Published</h2>
           <table class="govuk-table">
-            <caption class="govuk-table__caption govuk-table__caption--m">Pending certificate reviews</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Service</th>
-                <th scope="col" class="govuk-table__header">Service provider</th>
-                <th scope="col" class="govuk-table__header">Days remaining</th>
+                <th scope="col" class="govuk-table__header">Services</th>
+                <th scope="col" class="govuk-table__header">Provider</th>
                 <th scope="col" class="govuk-table__header govuk-table__cell--numeric">Actions</th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__cell govuk-!-width-one-quarter">ACME ID</th>
-                <td class="govuk-table__cell govuk-!-width-one-quarter">ACME Limited</td>
-                <td class="govuk-table__cell govuk-!-width-one-quarter">4 days</td>
+                <td class="govuk-table__cell">ACME ID</td>
+                <td class="govuk-table__cell">ACME Limited</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric">
-                  <a href="#" class="govuk-button govuk-!-margin-bottom-0">Review certificate</a>
+                  <a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Update</a>
+                  <a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Reassign</a>
+                  <a href="#" class="govuk-button govuk-button--warning govuk-!-margin-bottom-0">Remove</a>
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__cell govuk-!-width-one-quarter">ProveMe Biometrics</th>
-                <td class="govuk-table__cell govuk-!-width-one-quarter">WeKnowYou Ltd</td>
-                <td class="govuk-table__cell govuk-!-width-one-quarter">6 days</td>
+                <td class="govuk-table__cell">MyID</td>
+                <td class="govuk-table__cell">IdentityCo Limited</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric">
-                  <a href="#" class="govuk-button govuk-!-margin-bottom-0">Review certificate</a>
+                  <a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Update</a>
+                  <a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Reassign</a>
+                  <a href="#" class="govuk-button govuk-button--warning govuk-!-margin-bottom-0">Remove</a>
                 </td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__cell govuk-!-width-one-quarter">MiMi</th>
-                <td class="govuk-table__cell govuk-!-width-one-quarter">Impancipation Co</td>
-                <td class="govuk-table__cell govuk-!-width-one-quarter">7 days</td>
+                <td class="govuk-table__cell">ProveMe Wallet</td>
+                <td class="govuk-table__cell">WeKnowYouLtd</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric">
-                  <a href="#" class="govuk-button govuk-!-margin-bottom-0">Review certificate</a>
+                  <a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Update</a>
+                  <a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Reassign</a>
+                  <a href="#" class="govuk-button govuk-button--warning govuk-!-margin-bottom-0">Remove</a>
                 </td>
               </tr>
-            </tbody>
-          </table>
-          <table class="govuk-table govuk-!-margin-top-9">
-            <caption class="govuk-table__caption govuk-table__caption--m">Pending public interest checks</caption>
-            <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Service</th>
-                <th scope="col" class="govuk-table__header">Service provider</th>
-                <th scope="col" class="govuk-table__header">Days remaining</th>
-                <th scope="col" class="govuk-table__header govuk-table__cell--numeric">Actions</th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__cell govuk-!-width-one-quarter">EyeEye</th>
-                <td class="govuk-table__cell govuk-!-width-one-quarter">1984 Inc.</td>
-                <td class="govuk-table__cell govuk-!-width-one-quarter">10 days</td>
+                <td class="govuk-table__cell">ProveMe Biometrics</td>
+                <td class="govuk-table__cell">WeKnowYouLtd</td>
                 <td class="govuk-table__cell govuk-table__cell--numeric">
-                  <a href="#" class="govuk-button govuk-!-margin-bottom-0">Start check</a>
+                  <a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Update</a>
+                  <a href="#" class="govuk-button govuk-button--secondary govuk-!-margin-bottom-0">Reassign</a>
+                  <a href="#" class="govuk-button govuk-button--warning govuk-!-margin-bottom-0">Remove</a>
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
-      </div>
-      
-      <hr class="govuk-section-break govuk-section-break--l">
-      
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-full">
-          <h2 class="govuk-heading-m">Pending removal requests</h2>
-          <p class="govuk-body">There are no pending removal requests.</p>
+        <div class="govuk-tabs__panel" id="pending">
+          <h2 class="govuk-heading-l">Pending</h2>
+          
+        </div>
+        <div class="govuk-tabs__panel" id="archived">
+          <h2 class="govuk-heading-l">Archived</h2>
+          
         </div>
       </div>
+            
     </main>
     
   </div>
